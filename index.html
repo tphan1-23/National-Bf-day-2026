@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For my bbi 💗</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="stage" id="stage">
+
+        <!-- PAGE 1 -->
+        <section class="scene active">
+            <h1 class="big-text">Happy 1 year and 5 months<br><span>anh yeu</span></h1>
+            <button class="hint" data-next aria-label="Next">
+                <span class="hint-text">swipe up</span>
+            </button>
+        </section>
+
+        <!-- PAGE 2 -->
+        <section class="scene below">
+            <h1 class="big-text">Also,<br>Happy National<br>Boyfriend Day,<br>my handsome, tall, smart, cute, black, crybaby, silly, funny<br><span>bbi~</span></h1>
+            <button class="hint" data-next aria-label="Next">
+                <span class="hint-text">swipe up</span>
+            </button>
+        </section>
+
+        <!-- PAGE 3 -->
+        <section class="scene below">
+            <h1 class="big-text">Thank you for being the best boyfriend ever,<br>here is a little something for you<br><span>mi amor</span></h1>
+            <button class="hint" data-next aria-label="Next">
+                <span class="hint-text">swipe up</span>
+            </button>
+        </section>
+
+        <!-- PAGE 4 -->
+        <section class="scene below">
+            <p class="scene-title">Pick one đi baby :)</p>
+
+            <div class="items">
+                <!-- Letter -->
+                <button class="item" data-open="modal-letter">
+                    <div class="envelope">
+                        <div class="env-flap"></div>
+                    </div>
+                    <span class="item-label">A letter</span>
+                </button>
+
+                <!-- Gift box -->
+                <button class="item" data-open="modal-gift">
+                    <div class="giftbox">
+                        <div class="gb-lid"></div>
+                        <div class="gb-body"></div>
+                    </div>
+                    <span class="item-label">A gift</span>
+                </button>
+
+                <!-- Polaroid -->
+                <button class="item" data-open="modal-photo">
+                    <div class="polaroid small">
+                        <div class="polaroid-photo">
+                            <img src="photos/photo.jpg" alt="" onerror="this.remove()">
+                            <span class="photo-fallback">📷</span>
+                        </div>
+                    </div>
+                    <span class="item-label">A memory</span>
+                </button>
+            </div>
+
+            <button class="hint" data-next aria-label="Next">
+                <span class="hint-text">swipe up</span>
+            </button>
+        </section>
+
+        <!-- PAGE 5: SONG MEANING -->
+        <section class="scene below">
+            <p class="scene-title">Reason why I choose this song</p>
+            <div class="song-text">
+                <p>"Transform" by Daniel Caesar is a about the struggle to change yourself and grow through love and relationships. 
+                    It explores the tension between wanting to change for love and the struggle of overcoming one's inherent, flawed nature.</p>
+                <p>I choose this song because I want to express the feelings and struggles that come with trying to grow and change in a relationship. 
+                    <br><mark>- "If it's in my nature. Tranform, transform, transform, transform"</mark><br>
+                    Especially with us. We have been on such a journey to grow and change together, so much challenges and triumphs in our relationship. But I'm always grateful that no matter what
+                we still willing to work it out and by that we came closer with each other day by day. <br><mark>- "Lay down your pride, lay down with me"</mark><br>
+                Knowing you have change me a lot as a person, I have become more mature and better than I was in the past. EVen though I still make mistakes here and there. <br><mark>- "So ugly but you love me. Keep nobody else above me"</mark><br> 
+                A lot have happened in 1 year and 5 months for me and you have always been there for me always.<br><mark>- "Save my soul like Jesus"</mark><br></p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- LETTER -->
+    <div class="modal" id="modal-letter">
+        <div class="card paper">
+            <button class="close" data-close aria-label="Close">&times;</button>
+            <h3>Dear my baby Manuel,</h3>
+            <br>
+            <p>It's been 1 year and 5 months, and I'm still so happy it's you. </p>
+            <p class="sign">Love you always,<br>your baby Mat Mat</p>
+        </div>
+    </div>
+
+    <!-- GIFT -->
+    <div class="modal" id="modal-gift">
+        <!-- close button lives outside the card so it stays in the screen corner -->
+        <button class="close close-corner" data-close aria-label="Close">&times;</button>
+        <div class="card gift-card">
+            <div class="giftbox big" id="bigGift">
+                <div class="gb-lid"></div>
+                <div class="gb-text">Ask me about it</div>
+                <div class="gb-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POLAROID -->
+    <div class="modal" id="modal-photo">
+        <div class="card">
+            <button class="close" data-close aria-label="Close">&times;</button>
+            <div class="polaroid large">
+                <div class="polaroid-photo">
+                    <img src="polaroid pics/polaroid pic.jpg" alt="Us" onerror="this.remove()">
+                    <span class="photo-fallback">📷<br><small>polaroid pic.jpg</small></span>
+                </div>
+                <p class="caption">em & anh</p>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bgm" src="music/song.mp3" loop preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
