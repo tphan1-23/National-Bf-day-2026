@@ -43,7 +43,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .big-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(2.4rem, 8vw, 5.2rem);
+    font-size: clamp(1.8rem, 6vw, 3.8rem);
     font-weight: 100;         
     line-height: 1.25;
     color: var(--ink);
@@ -52,7 +52,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .scene-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-size: clamp(1.6rem, 4.8vw, 2.5rem);
     margin-bottom: 40px;
 }
 
@@ -98,7 +98,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .item-label {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.7rem;
+    font-size: 1.35rem;
     font-weight: 200;
 }
 
@@ -256,16 +256,28 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .paper h2 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; margin-bottom: 8px; }
 .paper p { line-height: 32px; font-size: 1.05rem; margin-bottom: 8px; }
-.paper .sign { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; text-align: right; margin-top: 8px }
+.paper .sign { font-family: 'Montserrat', sans-serif; font-size: 1rem; text-align: right; margin-top: 8px }
 
 /* gift reveal */
 .gift-card h2 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; margin-bottom: 8px; }
 .gift-reveal { opacity: 0; transform: translateY(16px); transition: all 0.7s 0.5s; }
 .gift-card.opened .gift-reveal { opacity: 1; transform: none; }
 
-/* song meaning page */
-.song-text { max-width: 560px; }
-.song-text p { font-size: clamp(1.05rem, 2.6vw, 1.3rem); line-height: 1.8; margin-bottom: 18px; }
+/* highlighted sentences */
+mark {
+    background: var(--pink);   
+    color: inherit;
+    padding: 0.05em 0.3em;
+    border-radius: 4px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+/* song meaning page: smaller text so everything fits on one screen */
+.song-scene { justify-content: safe center; overflow-y: auto; padding: 20px 24px; }
+.song-scene .scene-title { font-size: clamp(1.1rem, 3.2vh, 1.8rem); margin-bottom: clamp(8px, 2vh, 18px); }
+.song-text { max-width: 680px; }
+.song-text p { font-size: clamp(0.7rem, 1.75vh, 0.95rem); line-height: 1.55; margin-bottom: 8px; }
 
 /* keep the three items on one line on small screens */
 @media (max-width: 640px) {
